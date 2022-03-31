@@ -29,6 +29,10 @@ app.get('/guestbook', (req, res) => {
    res.send(results);
 });
 
+app.get('/ajaxmessage', (req, res) => {
+    res.sendFile(__dirname + '/views/ajaxmessage.html')
+})
+
 //näyttää uusikirjaus formin
 app.get('/newmessage', (req, res) => {
     res.sendFile(__dirname + '/views/newmessage.html')
