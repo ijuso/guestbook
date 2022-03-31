@@ -40,7 +40,7 @@ app.get('/newmessage', (req, res) => {
 
 //post juttu, tallentaa formiin laitetut jutut
 app.use(bodyParser.urlencoded({ extended: true }));
-app.post("/guestbook", function (req, res) {
+app.post("/t", function (req, res) {
     
   var listdata = require(__dirname + '/public/data/lista.json');
   listdata.push({
