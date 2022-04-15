@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
 <body>
     <div class="topnav">
-    <a href="/">Koti</a>
-    <a href="/guestbook">Vieraskirja</a>
-    <a href="/newmessage">Uusi Kirjaus</a>
-    <a class="active" href="/ajaxmessage">ajax</a>
+        <a href="/">Koti</a>
+        <a href="/guestbook">Vieraskirja</a>
+        <a class="active" href="/newmessage">Uusi Kirjaus</a>
+        <a href="/ajaxmessage">ajax</a>
+        </div>
+    <div>
+      <form method="POST" action="/t">
+        <div class="form-group">
+          <label>Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="käyttis"
+            name="username"
+            required 
+          />
+        </div>
+        <div class="form-group">
+            <label>Country</label>
+            <input
+            type="text"
+              class="form-control"
+              id="country"
+              placeholder="maaaa"
+              name="country"
+              required  
+            />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <input
+            type="text"
+              class="form-control"
+              id="message"
+              placeholder="käyttis"
+              name="message"
+              required  
+            />
+          </div>
+        <button type="submit" id="button1" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
     </div>
- 
-<img src="img/cat.jpeg" alt="kissa">
-<div id="container"></div>
-</body>
-</html>
+    
+ </body>
+ </html>
