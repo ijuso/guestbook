@@ -29,14 +29,17 @@ app.get('/guestbook', (req, res) => {
    res.send(results);
 });
 
-app.get('/ajaxmessage', (req, res) => {
-    res.sendFile(__dirname + '/views/ajaxmessage.html')
-})
-
 //näyttää uusikirjaus formin
 app.get('/newmessage', (req, res) => {
     res.sendFile(__dirname + '/views/newmessage.html')
 })
+
+//näyttää ajaxform formin
+app.get('/ajaxmessage', (req, res) => {
+  res.sendFile(__dirname + '/views/ajaxmessage.html')
+})
+
+
 
 //post juttu, tallentaa formiin laitetut jutut
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -64,4 +67,4 @@ app.post("/t", function (req, res) {
 });
 
 //kuunnellaan
-app.listen(PORT, () => console.info('Listening on port ' + PORT))
+app.listen(port, () => console.info('Listening on port ' + port))
