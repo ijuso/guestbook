@@ -67,4 +67,4 @@ app.post("/t", function (req, res) {
 });
 
 //kuunnellaan
-app.listen(port, () => console.info('Listening on port ' + port))
+app.listen(PORT, () => console.info('Listening on port ' + PORT))
