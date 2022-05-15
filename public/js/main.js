@@ -16,7 +16,7 @@ window.onload = event => {
       }
     };
 
-    xmlhttp.open("POST", "/t", true);
+    xmlhttp.open("POST", "/t2", true);
     xmlhttp.setRequestHeader(
       "Content-type",
       "application/x-www-form-urlencoded"
