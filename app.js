@@ -66,5 +66,29 @@ app.post("/t", function (req, res) {
   ); 
 });
 
+
+//tallennus2
+app.use(bodyParser.urlencoded({ extended: true }));
+app.post("/t2", function (req, res) {
+    
+  var listdata = require(__dirname + '/public/data/lista.json');
+  listdata.push({
+    id: listdata.length + 1,
+      username: req.body.username,
+      country: req.body.country,
+      message: req.body.message,
+      date: new Date()
+  });
+  //muokataan json objekti stringi muotoon
+  var jsonStr = JSON.stringify(listdata);
+
+  //kirjoitetaan data tiedostoon
+  fs.writeFile("./public/data/lista.json", jsonStr, err => {
+    if (err) throw err;
+    console.log(username);
+  });
+  
+});
+
 //kuunnellaan
 app.listen(PORT, () => console.info('Listening on port ' + PORT))
